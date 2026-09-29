@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certbot-xin"
+dynamic = ["version", "dependencies"]
+description = "Xin authenticator and installer for distribution Certbot"
+readme = "README.md"
+license = "Apache-2.0 AND MIT"
+license-files = ["LICENSE.txt", "NOTICE"]
+requires-python = ">=3.6"
+authors = [{name = "Xin project", email = "mehrdad@xinproxy.com"}]
+
+[project.entry-points."certbot.plugins"]
+xin = "certbot_xin._internal.entrypoint:ENTRYPOINT"
+
+[project.urls]
+Homepage = "https://xinproxy.com"
+Source = "https://github.com/xinproxy/certbot/tree/main/certbot-xin"
+Upstream = "https://github.com/certbot/certbot"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["certbot_xin._internal.tests*"]
+
+[tool.setuptools.package-data]
+"certbot_xin._internal" = ["tls_configs/*.conf"]

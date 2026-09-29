@@ -1,0 +1,3 @@
+certbot-xin is a modified fork of certbot-nginx 4.0.0, part of the Certbot project (https://github.com/certbot/certbot). The original certbot-nginx source is licensed under Apache-2.0. The included nginxparser code is licensed under MIT; its copyright notice and the full terms of both licenses are in LICENSE.txt.
+
+The Xin project renamed and adapted the plugin for the Xin web server. This package is maintained independently of the upstream Certbot project.

@@ -1,0 +1,1 @@
+"""Xin server plugin implementation."""
